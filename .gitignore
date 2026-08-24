@@ -1,0 +1,36 @@
+# .gitignore for C# lessons
+# Build results
+bin/
+obj/
+# Visual Studio files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+# Visual Studio Code settings
+.vscode/
+# Rider/IDEA settings
+.idea/
+# NuGet packages
+*.nupkg
+packages/
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+# Resharper
+*.DotSettings.user
+# Logs
+*.log
+# Temporary files
+*.tmp
+# Publish output
+publish/
+# Test results
+TestResults/
+# Coverage reports
+coverage*
+# Misc
+*.cache
+*.vspscc
+.vs/
