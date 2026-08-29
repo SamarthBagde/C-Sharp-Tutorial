@@ -138,6 +138,8 @@ public class Configuration
 
 ## Note 
 
+- Constructors can be overloaded. Constructor overloading allows a class to have more than one constructor, provided that each constructor has a unique signature determined by its parameter list
+- We cannot override a constructor. Constructors are tied directly to the specific class that defines them and are not inherited by derived (child) classes. 
 - Constructors cannot be marked as `virtual` or `abstract`
 - If you write a parameterized constructor, `C#` stops providing the automatic parameterless default constructor.
 - You can leverage Constructor Chaining using the `this` keyword to make one constructor invoke another constructor within the same class, minimizing code repetition.
