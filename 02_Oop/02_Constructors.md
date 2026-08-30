@@ -186,3 +186,34 @@ public class Configuration
     Employee emp3 = new Employee("Charlie", "Manager", 80000); 
     // Result: Name = "Charlie", Role = "Manager", Salary = 80000
     ```
+
+
+# Destructor 
+
+Destructor (officially called a finalizer) is a special class method used to clean up unmanaged resources right before the .NET Garbage Collector reclaims the object's memory
+
+```c#
+using System;
+
+public class ResourceManager
+{
+    // Constructor
+    public ResourceManager()
+    {
+        Console.WriteLine("Resource allocated.");
+    }
+
+    // Destructor (Finalizer)
+    ~ResourceManager()
+    {
+        // Cleanup code for unmanaged resources goes here
+        Console.WriteLine("Resource cleaned up by the Garbage Collector.");
+    }
+}
+```
+
+In modern C#, you rarely need to write a destructor.
+
+- `Performance Cost`: Objects with destructors require at least two garbage collection cycles to be fully cleared from memory.
+
+- `The Better Alternative`: For cleaning up resources (like file streams, database connections, or graphics handles), you should implement the ` Hello hello destructorIDisposable` interface and use a using statement. This forces resources to clear out immediately rather than waiting on the unpredictable schedule of the Garbage Collector
